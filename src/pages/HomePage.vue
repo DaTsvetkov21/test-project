@@ -46,13 +46,13 @@ onMounted(() => {
   <main class="flex flex-col min-h-screen p-4 bg-gray-100 gap-3">
     <div class="flex gap-2 flex-col lg:flex-row">
       <SelectedItems
+          v-model:items="selectedLeft"
           title="Выбранные вещи пользователя (макс.6)"
-          :items="selectedLeft"
           class="flex-1"
       />
       <SelectedItems
+          v-model:items="selectedRight"
           title="Выбранные вещи (макс. 1)"
-          :items="selectedRight"
           class="flex-1"
       />
     </div>

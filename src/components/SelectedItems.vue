@@ -7,10 +7,7 @@ defineProps<{
 const items = defineModel<Item[]>('items', {required: true})
 
 const handleClick = (item: Item) => {
-  const index = items.value.findIndex(el => el.id === item.id)
-  if (index !== -1) {
-    items.value.splice(index, 1)
-  }
+  items.value = items.value.filter((el) => el.id != item.id)
 }
 </script>
 
